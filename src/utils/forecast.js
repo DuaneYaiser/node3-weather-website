@@ -18,9 +18,12 @@ const forecast = (latitude, longitude, callback) => {
 				body.daily.data[0].summary +
 					' It is currently ' +
 					body.currently.temperature +
-					' degrees out. There is a ' +
+					' degrees out, with the apparent temperature at ' +
+					body.currently.apparentTemperature +
+					' degrees. There is a ' +
 					body.currently.precipProbability +
-					'% chance of rain.'
+					'% chance of rain. ' +
+					body.daily.summary
 			);
 		}
 	});
